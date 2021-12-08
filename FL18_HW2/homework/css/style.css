@@ -102,7 +102,6 @@ section::before {
 }
 
 .btn-primary:hover {
-    background-color: lightskyblue;
     border-color: lightskyblue;
 }
 
