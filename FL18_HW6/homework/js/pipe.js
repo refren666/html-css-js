@@ -4,12 +4,18 @@ function isFunction(functionToCheck) {
 
 const pipe = (value, ...funcs) => {
 	// PIPE implementation
-    funcs.forEach((func, index) => {
-        if (!isFunction(func)) {
-            alert(`Provided argument at position ${index} is not a function!`);
-        }
-    })
-    return funcs.reduce((previousValue, func) => func(previousValue), value);
+    try {
+        funcs.forEach((func, index) => {
+            if (!isFunction(func)) {
+                throw new Error(`Provided argument at position ${index} is not a function!`)
+            }
+            value = func(value);
+        })
+    } catch(error) {
+        return error
+    }
+    // return funcs.reduce((previousValue, func) => func(previousValue), value);
+    return value;
 };
 
 const replaceUnderscoreWithSpace = (value) => value.replace(/_/g, ' ');
@@ -21,7 +27,7 @@ const capitalize = (value) =>
 const appendGreeting = (value) => `Hello, ${value}!`;
 
 // const error = pipe('john_doe', replaceUnderscoreWithSpace, capitalize, '');
-//
+
 // alert(error); // Provided argument at position 2 is not a function!
 
 const result = pipe('john_doe', replaceUnderscoreWithSpace, capitalize, appendGreeting);
