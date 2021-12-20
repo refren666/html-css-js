@@ -22,27 +22,28 @@ function forEach(arr, func) {
 // forEach(array, function(el) { console.log(el) });
 
 function map(arr, func) {
-    forEach(arr, func);
+    let localArray = [];
+    forEach(arr, (el) => {
+        localArray.push(func(el))
+    })
+    return localArray;
 }
 
-// map([2, 5, 8], function(el) { console.log(el + 3) });
+// console.log(map([2, 5, 8], function(el) { return el + 3 }));
 // map([1, 2, 3, 4, 5], function(el) { console.log(el * 2) });
 
 function filter(arr, func) {
-    forEach(arr, func);
+    let localArray = [];
+    forEach(arr, (el) => {
+        if (func(el)) {
+            localArray.push(el);
+        }
+    })
+    return localArray;
 }
 
-// filter([2, 5, 1, 3, 8, 6], function(el) {
-//     if (el > 3) {
-//         console.log(el);
-//     }
-// })
-//
-// filter([1, 4, 6, 7, 8, 10], function(el) {
-//     if (el % 2 === 0) {
-//         console.log(el);
-//     }
-// })
+// filter([2, 5, 1, 3, 8, 6], function(el) { return el > 3 })
+// filter([1, 4, 6, 7, 8, 10], function(el) { return el % 2 === 0 })
 
 // let peoples = [
 //     {
@@ -82,14 +83,14 @@ function filter(arr, func) {
 const eighteen = 18;
 
 function getAdultAppleLovers(data) {
-    map(data, function (el) {
-        if (el.age > eighteen && el.favoriteFruit === 'apple') {
-            console.log(el.name);
-        }
+    const filteredArray = filter(data, function (el) {
+        return el.age > eighteen && el.favoriteFruit === 'apple';
     })
+
+    return map(filteredArray, el => el.name)
 }
 
-// getAdultAppleLovers(peoples);
+// getAdultAppleLovers(peoples)
 
 const two = 2;
 const three = 3;
@@ -113,7 +114,6 @@ function getValues(obj) {
 }
 
 // console.log(getValues({keyOne: 1, keyTwo: two, keyThree: three}));
-
 
 function showFormattedDate(dateObj) {
     const dateValues = dateObj.toDateString();
