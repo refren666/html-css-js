@@ -1,0 +1,54 @@
+/* write your styles here */
+.type-of-search__field {
+    display: flex;
+    align-items: center;
+}
+
+.search__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+thead {
+    background-color: #45a245;
+    color: white;
+    text-align: center;
+}
+
+tr > th:nth-child(1)::after {
+    content: '↑';
+}
+
+tr > th:nth-child(5)::after {
+    content: '↕';
+}
+
+tr > th:nth-child(1)::after,
+tr > th:nth-child(5)::after {
+    color: yellow;
+    font-size: 1.2rem;
+    padding-left: 5px;
+}
+
+tr > th:nth-child(1),
+tr > th:nth-child(5) {
+    cursor: pointer;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
