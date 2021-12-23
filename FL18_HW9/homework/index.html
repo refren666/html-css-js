@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 9 - JS DOM Events</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="task1">
+    <!-- TEMPLATE FOR TASK 1 GOES HERE -->
+    <table id="table">
+      <tr>
+        <td class="first-row">Cell</td>
+        <td class="cell default-bg">Cell</td>
+        <td class="cell default-bg">Cell</td>
+      </tr>
+      <tr>
+        <td class="second-row">Cell</td>
+        <td class="special">Special <br> Cell</td>
+        <td class="cell default-bg">Cell</td>
+      </tr>
+      <tr>
+        <td class="third-row">Cell</td>
+        <td class="cell default-bg">Cell</td>
+        <td class="cell default-bg">Cell</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="task2">
+    <!-- TEMPLATE FOR TASK 2 GOES HERE -->
+
+    <div id="messagePlaceholder"></div>
+
+    <form id="phone-validation__form" name="phoneForm">
+      <label for="phone-input"></label>
+      <input type="text" id="phone-input" placeholder="Type phone number in format +380*********">
+      <button id="sendBtn">Send</button>
+    </form>
+  </div>
+
+  <div id="task3">
+    <!-- TEMPLATE FOR TASK 3 GOES HERE -->
+    <div id="gameWrapper">
+      <img src="assets/court.png" alt="basketball-court" id="courtImg">
+      <img src="assets/ball.png" alt="basketball-ball" id="ball" width="40" height="40">
+      <span id="teamABasket"></span>
+      <span id="teamBBasket"></span>
+    </div>
+  </div>
+
+  <div id="scoresWrapper">
+    <div id="teamAScoreboard"></div>
+    <div id="teamBScoreboard"></div>
+  </div>
+
+  <div class="notificationBlockWrapper">
+    <div id="notificationBlock"></div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
