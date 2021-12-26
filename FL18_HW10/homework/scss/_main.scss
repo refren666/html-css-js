@@ -1,0 +1,184 @@
+// Write your styles here
+%button-style {
+  border: none;
+  background-color: $bg_color3;
+  color: $text_color2;
+  padding: 10px 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+  background-color: $bg_color4;
+}
+.header {
+  background: $background_image no-repeat center/cover;
+  border-bottom-right-radius: 45%;
+}
+.header-wrap {
+  margin: 0 auto;
+  max-width: 80%;
+  padding-bottom: 120px;
+}
+.landing-logo {
+  display: flex;
+  img {
+    margin-right: 10px;
+  }
+}
+.landing-logo p,
+.landing-logo span {
+  color: $text_color1;
+  text-align: center;
+}
+.landing-logo p,
+.footer_logo p {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.landing-logo span,
+.footer_logo span {
+  font-size: 0.6rem;
+  letter-spacing: normal;
+}
+.header_heading {
+  font-size: 3.2rem;
+  color: $text_color2;
+  font-weight: bold;
+  margin: 50px 0;
+  span {
+    background-color: $bg_color2;
+  }
+}
+.header_text {
+  color: $text_color1;
+  width: 50%;
+}
+.header_log-in {
+  margin-top: 50px;
+}
+.header_button {
+  margin-right: 120px;
+}
+.header_button,
+.section_banner_button {
+  @extend %button-style;
+}
+.login {
+  color: $text_color2;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_text {
+  color: $text_color1;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 50px 0;
+  span {
+    background-color: $bg_color2;
+  }
+}
+.section_card_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+.section_card {
+  background-color: $bg_color1;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.section_card_img_container {
+  padding: 12px;
+  flex-grow: 1;
+}
+.section_card_img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.section_card_heading,
+.section_banner_text {
+  color: $text_color2;
+}
+.section_card_heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.section_card_text,
+.section_link {
+  color: $text_color3;
+  font-size: 0.9rem;
+}
+.section_card_right_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  padding: 15px;
+  width: 60%;
+  justify-content: center;
+}
+.section_banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 100px;
+  width: 65%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, $bg_color3, $bg_color2);
+  position: relative;
+  top: 57px;
+}
+.section_banner_heading {
+  color: $text_color1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.banner_button_block {
+  display: flex;
+  align-items: center;
+}
+.section_banner_text {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.footer {
+  background-color: $bg_color1;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 80%;
+}
+.footer,
+.footer_logo p,
+.footer_logo span {
+  color: $text_color2;
+}
+.footer,
+.footer_logo span {
+  font-size: 0.7rem;
+}
+.footer_text {
+  width: 25%;
+}
