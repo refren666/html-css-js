@@ -1,0 +1,540 @@
+:root {
+  --primary: #0078aa;
+  --dark: #363636;
+  --light: #fff;
+  --light-blue: #47C9E5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.up__arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.up__arrow:hover {
+  background-color: var(--light);
+  outline: 1px solid var(--primary);
+}
+
+.arrow__icon {
+  fill: var(--light);
+  width: 20px;
+}
+
+.up__arrow:hover .arrow__icon {
+  fill: var(--primary);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav__container {
+  height: 56px;
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+
+.nav__menu {
+  position: fixed;
+  width: 100%;
+  background: white;
+  top: 0;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav {
+  display: flex;
+  column-gap: 10px;
+}
+
+.nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+.header__main {
+  background: url("../img/lady.jpg") no-repeat center/cover;
+  padding: 100px 0;
+}
+
+.header__main__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.header__main__content h1 {
+  font-size: 2.4rem;
+}
+
+.header__main p {
+  color: var(--dark);
+  width: 50%;
+}
+
+.header__main__icons {
+  display: flex;
+  column-gap: 25px;
+}
+
+.header__main__icons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.header__main__icons div:hover {
+  background-color: var(--light);
+  outline: 1px solid var(--primary);
+  cursor: pointer;
+}
+
+.header__main__icons svg {
+  fill: var(--light);
+  width: 30px;
+}
+
+.header__main__icons>div:hover svg {
+  fill: var(--primary);
+}
+
+.about__us {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.about__us__image {
+  flex-basis: 30%;
+}
+
+.about__us__block {
+  flex-basis: 30%;
+  padding-left: 15px;
+}
+
+.about__us__heading h2 {
+  font-size: 2rem;
+}
+
+.about__us__heading p {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.about__us__services {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 15px;
+}
+
+.service__item h3 {
+  font-size: 1.2rem;
+}
+
+.service__item svg {
+  width: 20px;
+  fill: var(--primary)
+}
+
+.services {
+  margin-top: 50px;
+  background: url("../img/services_bg.jpg") no-repeat center/cover;
+}
+
+.services__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.services__heading {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services__heading h2 {
+  font-size: 2rem;
+}
+
+.services__heading p {
+  font-weight: 500;
+  padding-top: 5px;
+}
+
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.service__item h3 {
+  display: flex;
+  column-gap: 10px;
+}
+
+.service__item span {
+  display: flex;
+  align-items: center;
+}
+
+.services__block {
+  background-color: var(--light);
+  padding: 20px;
+}
+
+.services__block h3 {
+  padding: 7px 0;
+}
+
+.offers__heading {
+  display: flex;
+  margin: 50px 0 25px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offers__heading h2 {
+  font-size: 2rem;
+}
+
+.offers__heading p {
+  font-weight: 500;
+  padding-top: 5px;
+}
+
+.offers {
+  padding: 25px 0;
+  background: url("../img/pricing_bg.jpg") no-repeat center/cover;
+}
+
+.offers__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.offer__block {
+  background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+  color: var(--light);
+  row-gap: 20px;
+}
+
+.offer__block:nth-child(odd) {
+  margin: 40px 0;
+}
+
+.offer__block span {
+  font-weight: bold;
+}
+
+.central {
+  background-color: var(--light);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 65px 75px 25px;
+}
+
+.offer__type {
+  font-size: 1.2rem;
+}
+
+.price {
+  font-size: 3rem;
+}
+
+.offer__button {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: var(--light);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.offer__button:hover {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.contact__us {
+  display: grid;
+  margin-top: 25px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact__us__image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact__us__block {
+  width: 50%;
+  padding-bottom: 50px;
+}
+
+.contact__us__form__heading {
+  margin-bottom: 10px;
+}
+
+.contact__us__form__heading h2 {
+  font-size: 2rem;
+}
+
+.contact__us__form__heading p {
+  font-weight: 500;
+}
+
+.contact__us__form,
+.contact__us__form__heading {
+  padding: 0 20px;
+}
+
+.contact__us__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.contact__us__form input {
+  border: none;
+  border-bottom: 1px solid #ececec;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.contact__us__button {
+  margin-top: 10px;
+}
+
+.contact__us__button button {
+  padding: 12px 20px;
+  border: none;
+  color: var(--light);
+  background-color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.contact__us__button button:hover {
+  background-color: var(--light);
+  color: var(--primary);
+  outline: 1px solid var(--primary);
+}
+
+.footer {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 ;
+}
+
+.footer p {
+  color: var(--light);
+  font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .header__main__content h1 {
+    font-size: 2rem;
+  }
+
+  .about__us__heading h2,
+  .services__heading h2,
+  .offers__heading h2,
+  .contact__us__form__heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .header__main p,
+  .about__us__heading p,
+  .service__item p,
+  .services__heading p,
+  .services__block p,
+  .offers__heading p,
+  .offer__block p,
+  .contact__us__form__heading p {
+    font-size: 0.85rem;
+  }
+
+  .contact__us__form input {
+    font-size: 1rem;
+  }
+
+  .about__us__image {
+    flex: 1 1 auto;
+    padding: 0 20px;
+  }
+
+  .about__us__image img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .about__us__block {
+    flex-basis: 80%;
+  }
+
+  .offer__type,
+  .contact__us__form__heading p {
+    white-space: nowrap;
+  }
+
+  .offer__block:nth-child(odd) {
+    margin: 25px 0;
+  }
+
+  .central {
+    padding: 50px 75px 25px;
+  }
+
+  .contact__us__form__heading p {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__container {
+    height: 75px;
+  }
+
+  .header__top {
+    flex-direction: column;
+  }
+
+  .header__main__content {
+    align-items: center;
+  }
+
+  .header__main__icons {
+    column-gap: 65px;
+  }
+
+  .header__main p,
+  .header__main h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header__main {
+    padding: 40px 0;
+  }
+
+  .about__us {
+    flex-direction: column;
+  }
+
+  .about__us__image {
+    padding: 0;
+  }
+
+  .about__us__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service__item h3 {
+    justify-content: center;
+  }
+
+  .service__item p {
+    text-align: center;
+  }
+
+  .about__us__block {
+    padding: 0;
+  }
+
+  .about__us__heading {
+    text-align: center;
+  }
+
+  .services__container {
+    grid-template-columns: 1fr;
+  }
+
+  .offers__container {
+    grid-template-columns: 1fr;
+  }
+
+  .offers {
+    padding: 0;
+  }
+
+  .offer__block p {
+    font-size: 1rem;
+  }
+
+  .contact__us {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+
+  .contact__us__form__heading {
+    text-align: center;
+  }
+
+  .contact__us__block {
+    width: 100%;
+  }
+
+  .contact__us__button {
+    margin: 0 auto;
+  }
+}
