@@ -10,7 +10,7 @@ wss.on('connection', function connection(ws) {
     ws.on('message', function incoming(message) {
         const recievers = users.filter(user => user !== ws);
 
-        recievers.forEach(reciever => reciever.send(message));
+        recievers.forEach(receiver => receiver.send(message));
     });
 });
 
